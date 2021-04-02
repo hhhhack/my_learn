@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cy/code/my_learn/alg/Sort.h
+vector
+-
+iostream
+-
+
+/home/cy/code/my_learn/alg/test.cpp
+Sort.h
+/home/cy/code/my_learn/alg/Sort.h
+cstdlib
+-
+ctime
+-
+
