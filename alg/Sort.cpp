@@ -25,7 +25,7 @@
  * 
  * @Author: hhhhack
  * @Date: 2021-04-02 13:14:03
- * @LastEditTime: 2021-04-02 19:19:40
+ * @LastEditTime: 2021-04-06 22:36:14
  * @LastEditors: hhhhack
  * @Description: 
  * @FilePath: /my_learn/alg/Sort.cpp
@@ -33,6 +33,7 @@
  */
 #include "Sort.h"
 
+/*** 比较排序 ***/
 void insert_sort(vector<int> &nums)
 {
     if (nums.size() == 0)
@@ -93,5 +94,83 @@ void quic_sort(vector<int> &nums, int start, int end)
         int mid = partition(nums, start, end);
         quic_sort(nums, start, mid - 1);
         quic_sort(nums, mid + 1, end);
+    }
+}
+
+#define parent(i) (((i)-1) / 2)
+#define left(i) (((i)*2) + 1)
+#define right(i) (((i) + 1) * 2)
+
+void exchange(vector<int> &input, int i, int j)
+{
+    int length = input.size();
+    if (i == j || i < 0 || j < 0 || i >= length || j >= length)
+    {
+        return;
+    }
+    input[i] += input[j];
+    input[j] = input[i] - input[j];
+    input[i] -= input[j];
+}
+
+void max_heapity(vector<int> &input, int i, int length)
+{
+    int ls = left(i), rs = right(i), largest = i;
+    if (ls < length && input[ls] > input[largest])
+    {
+        largest = ls;
+    }
+    if (rs < length && input[rs] > input[largest])
+    {
+        largest = rs;
+    }
+    if (largest != i)
+    {
+        exchange(input, i, largest);
+        max_heapity(input, largest, length);
+    }
+}
+
+void build_max_heap(vector<int> &input)
+{
+    for (int i = parent(input.size()); i >= 0; i--)
+    {
+        max_heapity(input, i, input.size());
+    }
+}
+
+void heap_sort(vector<int> &input)
+{
+    build_max_heap(input);
+    for (int i = input.size() - 1; i >= 1;)
+    {
+        exchange(input, i, 0);
+        i--;
+        max_heapity(input, 0, i);
+    }
+}
+
+/*** 比较排序 ***/
+
+/*** 线性排序 ***/
+/**** 计数排序 ****/
+void count_sort(vector<int> &input, int min, int max)
+{
+    int n = max - min + 1;
+    vector<int> count(n, 0);
+    for (auto i = input.begin(); i != input.end(); i++)
+    {
+        count[*i]++;
+    }
+    int k = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (count[i] != 0)
+        {
+            for (int j = 0; j < count[i]; j++)
+            {
+                input[k++] = i;
+            }
+        }
     }
 }
