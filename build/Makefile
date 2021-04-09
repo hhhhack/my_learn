@@ -520,6 +520,33 @@ ContinuousSubmit/fast:
 	$(MAKE) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/build
 .PHONY : ContinuousSubmit/fast
 
+DataStruct.o: DataStruct.cpp.o
+
+.PHONY : DataStruct.o
+
+# target to build an object file
+DataStruct.cpp.o:
+	$(MAKE) -f CMakeFiles/alg.dir/build.make CMakeFiles/alg.dir/DataStruct.cpp.o
+.PHONY : DataStruct.cpp.o
+
+DataStruct.i: DataStruct.cpp.i
+
+.PHONY : DataStruct.i
+
+# target to preprocess a source file
+DataStruct.cpp.i:
+	$(MAKE) -f CMakeFiles/alg.dir/build.make CMakeFiles/alg.dir/DataStruct.cpp.i
+.PHONY : DataStruct.cpp.i
+
+DataStruct.s: DataStruct.cpp.s
+
+.PHONY : DataStruct.s
+
+# target to generate assembly for a file
+DataStruct.cpp.s:
+	$(MAKE) -f CMakeFiles/alg.dir/build.make CMakeFiles/alg.dir/DataStruct.cpp.s
+.PHONY : DataStruct.cpp.s
+
 Sort.o: Sort.cpp.o
 
 .PHONY : Sort.o
@@ -614,6 +641,9 @@ help:
 	@echo "... ContinuousMemCheck"
 	@echo "... ContinuousTest"
 	@echo "... ContinuousSubmit"
+	@echo "... DataStruct.o"
+	@echo "... DataStruct.i"
+	@echo "... DataStruct.s"
 	@echo "... Sort.o"
 	@echo "... Sort.i"
 	@echo "... Sort.s"

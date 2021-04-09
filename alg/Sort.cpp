@@ -25,7 +25,7 @@
  * 
  * @Author: hhhhack
  * @Date: 2021-04-02 13:14:03
- * @LastEditTime: 2021-04-06 22:36:14
+ * @LastEditTime: 2021-04-09 17:54:37
  * @LastEditors: hhhhack
  * @Description: 
  * @FilePath: /my_learn/alg/Sort.cpp
@@ -174,3 +174,58 @@ void count_sort(vector<int> &input, int min, int max)
         }
     }
 }
+
+/*** 顺序计量 ***/
+/**** 最大最小值 ****/
+int max(vector<int> &input)
+{
+    int max = input[0];
+    for (auto i = input.begin() + 1; i != input.end(); i++)
+    {
+        if (*i > max)
+        {
+            max = *i;
+        }
+    }
+    return max;
+}
+
+vector<int> max_and_min(vector<int> &input)
+{
+    int min = input[0], max = input[0];
+    for (auto i = 1; i + 1 < input.size();)
+    {
+        if (input[i] > input[i + 1])
+        {
+            max = max > input[i] ? max : input[i];
+            min = min < input[i + 1] ? min : input[i + 1];
+        }
+        else
+        {
+            max = max > input[i + 1] ? max : input[i + 1];
+            min = min < input[i] ? min : input[i];
+        }
+    }
+    return vector<int>{max, min};
+}
+/**** 第N位数 ****/
+// struct rst
+// {
+//     bool ok;
+//     int ret;
+// };
+
+// int binary_find(vector<int> input, int start, int end)
+// {
+//     int tmp = input[0];
+//     for (int i = start; i <=)
+// }
+
+// rst find_thN(vector<int> &input, int n)
+// {
+//     if (n > input.size())
+//     {
+//         return rst{false, -1};
+//     }
+//     binary_find()
+// }
