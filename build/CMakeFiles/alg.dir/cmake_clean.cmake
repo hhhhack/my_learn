@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/alg.dir/DataStruct.cpp.o"
   "CMakeFiles/alg.dir/Sort.cpp.o"
   "CMakeFiles/alg.dir/test.cpp.o"
   "alg"

@@ -6,17 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/cy/code/my_learn/alg/Sort.h
-vector
+/home/cy/code/my_learn/alg/DataStruct.cpp
+stack
 -
-iostream
--
+DateStruct.h
+/home/cy/code/my_learn/alg/DateStruct.h
 
-/home/cy/code/my_learn/alg/test.cpp
-Sort.h
-/home/cy/code/my_learn/alg/Sort.h
-cstdlib
--
-ctime
+/home/cy/code/my_learn/alg/DateStruct.h
+vector
 -
 

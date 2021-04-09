@@ -8,5 +8,10 @@
   "directory": "/home/cy/code/my_learn/build",
   "command": "/bin/g++-9    -g   -o CMakeFiles/alg.dir/Sort.cpp.o -c /home/cy/code/my_learn/alg/Sort.cpp",
   "file": "/home/cy/code/my_learn/alg/Sort.cpp"
+},
+{
+  "directory": "/home/cy/code/my_learn/build",
+  "command": "/bin/g++-9    -g   -o CMakeFiles/alg.dir/DataStruct.cpp.o -c /home/cy/code/my_learn/alg/DataStruct.cpp",
+  "file": "/home/cy/code/my_learn/alg/DataStruct.cpp"
 }
 ]

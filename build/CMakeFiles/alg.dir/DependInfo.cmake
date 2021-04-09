@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/cy/code/my_learn/alg/DataStruct.cpp" "/home/cy/code/my_learn/build/CMakeFiles/alg.dir/DataStruct.cpp.o"
   "/home/cy/code/my_learn/alg/Sort.cpp" "/home/cy/code/my_learn/build/CMakeFiles/alg.dir/Sort.cpp.o"
   "/home/cy/code/my_learn/alg/test.cpp" "/home/cy/code/my_learn/build/CMakeFiles/alg.dir/test.cpp.o"
   )
