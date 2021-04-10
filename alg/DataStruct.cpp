@@ -25,7 +25,7 @@
  * 
  * @Author: hhhhack
  * @Date: 2021-04-09 16:26:52
- * @LastEditTime: 2021-04-09 19:34:45
+ * @LastEditTime: 2021-04-10 11:24:21
  * @LastEditors: hhhhack
  * @Description: 
  * @FilePath: /my_learn/alg/DataStruct.cpp
@@ -129,9 +129,10 @@ void Bst::insert(int val)
     auto getkey = [](int value) -> int { return val % SHRT_MAX };
     int key = getkey(val);
     auto innode = new node(nullptr, nullptr, nullptr, key, val);
-    auto cur = this->root;
+    auto cur = this->root, p = nullptr;
     while (cur != nullptr)
     {
+        p = cur;
         if (cur->key > key)
         {
             cur = cur->left;
@@ -140,5 +141,18 @@ void Bst::insert(int val)
         {
             cur = cur->right
         }
+    }
+    auto innode = new node(nullptr, nullptr, p, key, val);
+    if (p == nullptr)
+    {
+        this->root = innode;
+    }
+    else if (p->key > key)
+    {
+        p->left = innode;
+    }
+    else
+    {
+        p->right = innode;
     }
 }
