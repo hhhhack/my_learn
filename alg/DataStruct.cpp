@@ -25,7 +25,7 @@
  * 
  * @Author: hhhhack
  * @Date: 2021-04-09 16:26:52
- * @LastEditTime: 2021-04-10 11:24:21
+ * @LastEditTime: 2021-04-10 15:07:29
  * @LastEditors: hhhhack
  * @Description: 
  * @FilePath: /my_learn/alg/DataStruct.cpp
@@ -124,7 +124,21 @@ vector<int> Bst::inorder_tree_walk()
     return ret;
 }
 
-void Bst::insert(int val)
+void Bst::insert_node(node innode)
+{
+    Bst::insert_node(innode.value);
+}
+
+void Bst::insert_node(node *innode)
+{
+    if (innode == nullptr)
+    {
+        return;
+    }
+    Bst::insert_node(innode->value);
+}
+
+void Bst::insert_node(int val)
 {
     auto getkey = [](int value) -> int { return val % SHRT_MAX };
     int key = getkey(val);
@@ -156,3 +170,5 @@ void Bst::insert(int val)
         p->right = innode;
     }
 }
+
+void delete
