@@ -1,0 +1,10 @@
+- 添加编译项
+	- add_executable(name source) 添加可执行文件
+		- name可执行文件名称
+		- source 源文件，可以通过[[Cmake#^82ec73|Cmake > ^82ec73]]指定
+	- add_library(libraryname type source)添加静态库
+		- libraryname 生成的库名
+		- type 静态库或动态库
+		- source源文件，可以通过[[Cmake#^82ec73|Cmake > ^82ec73]]指定
+	- include_directories()
+	- #file(TAG, file_path) ^82ec73
